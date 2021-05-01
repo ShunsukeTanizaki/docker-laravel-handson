@@ -5,6 +5,13 @@ services:
     volumes:
       - ./backend:/work
 
+      version: "3.8"
+services:
+  app:
+    build: ./infra/php
+    volumes:
+      - ./backend:/work
+
   # 追記
   web:
     image: nginx:1.18-alpine
